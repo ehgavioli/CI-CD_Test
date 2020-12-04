@@ -29,15 +29,15 @@ jobs:
 
       # Runs a single command using the runners shell
       -     name: Run a one-line script
-            run: echo Hello, world!
             shell: cmd
+            run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
       -     name: Run a multi-line script
+            shell: cmd
             run: |
               echo Add other actions to build,
               echo test, and deploy your project.
-          shell: cmd
           
   deploy:
    
@@ -45,11 +45,11 @@ jobs:
     
     steps:
         -   name: Create a file
+            shell: cmd
             run:
                 mkdir $GITHUB_WORKSPACE/deployFolder
                 cd $GITHUB_WORKSPACE/deployFolder
                 touch testfile.txt
-            shell: cmd
             
         -   name: Save artifact
             uses: actions/upload-artifact@v2
