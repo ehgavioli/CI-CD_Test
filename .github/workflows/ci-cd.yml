@@ -47,8 +47,8 @@ jobs:
         -   name: Create a file
             shell: cmd
             run:
-                mkdir $GITHUB_WORKSPACE/deployFolder
-                cd $GITHUB_WORKSPACE/deployFolder
+                mkdir deployFolder
+                cd deployFolder
                 echo > testfile.txt
             
         -   name: Save artifact
