@@ -42,8 +42,8 @@ jobs:
     steps:
         -   name: Create a file
             run:
-                mkdir deployFolder
-                cd deployFolder
+                mkdir $GITHUB_WORKSPACE/deployFolder
+                cd $GITHUB_WORKSPACE/deployFolder
                 touch testfile.txt
             
         -   name: Save artifact
