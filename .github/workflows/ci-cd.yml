@@ -46,7 +46,7 @@ jobs:
     steps:
         -   name: Create a file
             shell: cmd
-            run:
+            run: |
                 mkdir deployFolder
                 cd deployFolder
                 echo > testfile.txt
