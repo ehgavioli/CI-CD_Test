@@ -47,12 +47,12 @@ jobs:
         -   name: Create a file
             shell: cmd
             run: |
-                mkdir deployFolder
-                cd deployFolder
+                #mkdir deployFolder
+                #cd deployFolder
                 echo > testfile.txt
             
         -   name: Save artifact
             uses: actions/upload-artifact@v2
             with:
                 name: test-artifact
-                path: $GITHUB_WORKSPACE/deployFolder/*
+                path: testfile.txt
