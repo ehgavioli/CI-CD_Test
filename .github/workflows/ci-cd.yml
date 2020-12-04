@@ -47,8 +47,6 @@ jobs:
         -   name: Create a file
             shell: cmd
             run: |
-                #mkdir deployFolder
-                #cd deployFolder
                 echo > testfile.txt
             
         -   name: Save artifact
