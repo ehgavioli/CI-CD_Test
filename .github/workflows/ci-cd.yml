@@ -49,7 +49,7 @@ jobs:
             run:
                 mkdir $GITHUB_WORKSPACE/deployFolder
                 cd $GITHUB_WORKSPACE/deployFolder
-                touch testfile.txt
+                echo > testfile.txt
             
         -   name: Save artifact
             uses: actions/upload-artifact@v2
