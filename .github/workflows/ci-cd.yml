@@ -40,8 +40,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-        - name: Create a file
-          run:
-            mkdir deployFolder
-            cd deplyFolder
-            touch testfile.txt
+        -   name: Create a file
+            run:
+                mkdir deployFolder
+                cd deployFolder
+                touch testfile.txt
+            
+        -   name: Save artifact
+            uses: actions/upload-artifact@v2
+            with:
+                name: test-artifact
+                path: $GITHUB_WORKSPACE/deployFolder/*
